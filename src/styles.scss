@@ -1,1 +1,63 @@
+
+// Include theming for Angular Material with `mat.theme()`.
+// This Sass mixin will define CSS variables that are used for styling Angular Material
+// components according to the Material 3 design spec.
+// Learn more about theming and how to use it for your application's
+// custom components at https://material.angular.dev/guide/theming
+@use '@angular/material' as mat;
+
+// Include theming for Angular Material with `mat.theme()`.
+// This Sass mixin will define CSS variables that are used for styling Angular Material
+// components according to the Material 3 design spec.
+// Learn more about theming and how to use it for your application's
+// custom components at https://material.angular.dev/guide/theming
+
+html {
+  @include mat.theme((
+    color: (
+      primary: mat.$cyan-palette,
+      tertiary: mat.$orange-palette,
+    ),
+    typography: Roboto,
+    density: 0,
+  ));
+}
+
+body {
+  // Default the application to a light color theme. This can be changed to
+  // `dark` to enable the dark color theme, or to `light dark` to defer to the
+  // user's system settings.
+  color-scheme: light;
+
+  // Set a default background, font and text colors for the application using
+  // Angular Material's system-level CSS variables. Learn more about these
+  // variables at https://material.angular.dev/guide/system-variables
+
+    html {
+  --s: 116px; /* control the size*/
+  --c1: #2ec27e;
+  --c2: #1c71d8;
+  --c3: #000000;
+  
+  --_g: var(--c1) 10%,var(--c2) 10.5% 19%,#0000 19.5% 80.5%,var(--c2) 81% 89.5%,var(--c3) 90%;
+  --_c: from -90deg at 37.5% 50%,#0000 75%;
+  --_l1: linear-gradient(145deg,var(--_g));
+  --_l2: linear-gradient( 35deg,var(--_g));
+  background: 
+    var(--_l1), var(--_l1) calc(var(--s)/2) var(--s),
+    var(--_l2), var(--_l2) calc(var(--s)/2) var(--s),
+    conic-gradient(var(--_c),var(--c1) 0) calc(var(--s)/8) 0,
+    conic-gradient(var(--_c),var(--c3) 0) calc(var(--s)/2) 0,
+    linear-gradient(90deg,var(--c3) 38%,var(--c1) 0 50%,var(--c3) 0 62%,var(--c1) 0);
+  background-size: var(--s) calc(2*var(--s)/3);
+}
+    color: var(--mat-sys-on-surface);
+    font: var(--mat-sys-body-medium);
+
+  // Reset the user agent margin.
+  margin: 0;
+}
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,36 @@
+.navbar {
+  display: flex;            // makes .logo and .navigationSection sit in one row
+  align-items: center;      // vertically center items
+  padding: 0 20px;
+  height: 60px;
+  background-color: #f5f5f5;
+
+  .logo {
+    display: flex;
+    justify-content: flex-start; // aligns logo to the left
+    align-items: center;
+
+    img {
+      height: 40px;
+    }
+  }
+
+  .navigationSection {
+    display: flex;
+    margin-left: auto;         // pushes navigation buttons to the right
+    align-items: center;
+
+    .navbutton {
+      margin-left: 20px;
+      padding: 8px 16px;
+      border: none;
+      background: none;
+      cursor: pointer;
+
+      &:hover {
+        background-color: black;
+        color: white;
+      }
+    }
+  }
+}

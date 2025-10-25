@@ -1,0 +1,24 @@
+<mat-toolbar color="primary" class="navbar">
+  <span class="logo">Ryland Clark's Portfolio Website</span>
+
+  <span class="spacer"></span>
+
+  <nav class ="navigationSection">
+    <button class ="navbutton" mat-button routerLink="/">Home</button>
+    <button class ="navbutton" mat-button routerLink="/net">.Net Framework</button>
+    <button class ="navbutton" mat-button routerLink="/fullstack">Full Stack Development</button>
+    <button class ="navbutton" mat-button routerLink="/embedded">Embedded Systems & Hardware</button>
+    <button class ="navbutton" mat-button routerLink="/games">Games</button>
+    <button class ="navbutton" mat-button routerLink="/about">About</button>
+    <button class ="navbutton" mat-button routerLink="/contact">Contact</button>
+
+    <!-- Example of dropdown menu -->
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/settings">Settings</button>
+      <button mat-menu-item routerLink="/profile">Profile</button>
+    </mat-menu>
+  </nav>
+</mat-toolbar>
