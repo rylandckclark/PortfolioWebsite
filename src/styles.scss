@@ -23,7 +23,7 @@ html {
   ));
 }
 
-body {
+Body{
   // Default the application to a light color theme. This can be changed to
   // `dark` to enable the dark color theme, or to `light dark` to defer to the
   // user's system settings.
@@ -35,8 +35,8 @@ body {
 
     html {
   --s: 116px; /* control the size*/
-  --c1: #2ec27e;
-  --c2: #1c71d8;
+  --c1: #ffffff;
+  --c2: #8a8a8a;
   --c3: #000000;
   
   --_g: var(--c1) 10%,var(--c2) 10.5% 19%,#0000 19.5% 80.5%,var(--c2) 81% 89.5%,var(--c3) 90%;
