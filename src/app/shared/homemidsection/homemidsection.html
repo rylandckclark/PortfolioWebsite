@@ -1,0 +1,15 @@
+<mat-grid-list cols="6" rowHeight="100%">
+  @for (tile of tiles; track tile) {
+    <mat-grid-tile
+      [colspan]="tile.cols"
+      [rowspan]="tile.rows"
+      [style.background]="tile.color">
+    @if(tile.component) {
+        <ng-container *ngComponentOutlet="tile.component"></ng-container>
+    }
+    @else {
+        <span>{{tile.text}}</span>
+    }</mat-grid-tile>
+  }
+</mat-grid-list>
+

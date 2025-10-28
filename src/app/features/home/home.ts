@@ -1,8 +1,14 @@
 import { Component } from '@angular/core';
+import { Navbar } from '../../shared/navbar/navbar';
+import { Homemidsection } from '../../shared/homemidsection/homemidsection';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  standalone: true,
+  imports: [
+    Navbar,
+    Homemidsection,
+  ],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })

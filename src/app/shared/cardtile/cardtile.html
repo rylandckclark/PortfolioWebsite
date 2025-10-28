@@ -1,0 +1,15 @@
+<!-- For however many cards are implemented -->
+@for (Card of Cards; track Card) {
+<mat-card class = "Showcase" apearance ="oultined">
+    <mat-card-header>
+    <div mat-card-avatar class = "home-cardtile-icon" [style.background-image]="'url('+ Card.Icon +')'"></div>
+    <mat-card-title>{{Card.Title}}</mat-card-title>
+    <mat-card-subtitle>{{Card.Subtitle}}</mat-card-subtitle>
+    </mat-card-header>
+    <img src="{{Card.Image}}" alt="Error">
+    <mat-card-content>
+    <p>
+        {{Card.Desc}}
+    </p>
+    </mat-card-content>
+</mat-card>}
