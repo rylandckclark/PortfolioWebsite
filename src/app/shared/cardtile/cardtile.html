@@ -6,7 +6,7 @@
     <mat-card-title>{{Card.Title}}</mat-card-title>
     <mat-card-subtitle>{{Card.Subtitle}}</mat-card-subtitle>
     </mat-card-header>
-    <img src="{{Card.Image}}" alt="Error">
+    <img [src]="Card.Image" alt="Error">
     <mat-card-content>
     <p>
         {{Card.Desc}}
