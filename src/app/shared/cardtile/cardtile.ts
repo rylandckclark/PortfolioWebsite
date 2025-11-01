@@ -7,6 +7,7 @@ export interface Card {
   Subtitle: string;
   Image: string;
   Desc: string;
+  
 }
 @Component({
   selector: 'app-cardtile',
