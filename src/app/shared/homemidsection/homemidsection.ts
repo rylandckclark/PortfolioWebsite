@@ -29,7 +29,7 @@ export interface Tile {
 export class Homemidsection {
   tiles: Tile[] = [
     {text: 'Left', cols: 1, rows: 1, color: ' #cfab89ff'},
-    {component: Cardtile, cols: 4, rows: 1, color: '#744c23ff'},
+    {cols: 4, rows: 1, color: '#772014'},
     {text: 'Right', cols: 1, rows: 1, color: ' #cfab89ff'},
   ];
 }
