@@ -6,13 +6,14 @@
 
   <!-- Navigation handles routing to different sections of the website -->
   <nav class ="navigationSection">
-    <button class ="navbutton" mat-button routerLink="/">Home</button>
-    <button class ="navbutton" mat-button routerLink="/net">.Net Framework</button>
-    <button class ="navbutton" mat-button routerLink="/fullstack">Full Stack Development</button>
-    <button class ="navbutton" mat-button routerLink="/embedded">Embedded Systems & Hardware</button>
-    <button class ="navbutton" mat-button routerLink="/games">Games</button>
-    <button class ="navbutton" mat-button routerLink="/about">About</button>
-    <button class ="navbutton" mat-button routerLink="/contact">Contact</button>
+
+    <button class ="navbutton" mat-button [routerLink]="['/features/home']">Home</button>
+    <button class ="navbutton" mat-button [routerLink]="['/features/net-framework']">.Net Framework</button>
+    <button class ="navbutton" mat-button [routerLink]="['/features/full-stack-development']">Full Stack Development</button>
+    <button class ="navbutton" mat-button [routerLink]="['/features/embedded-hardware']">Embedded Systems & Hardware</button>
+    <button class ="navbutton" mat-button [routerLink]="">Games</button>
+    <button class ="navbutton" mat-button [routerLink]="">About</button>
+    <button class ="navbutton" mat-button [routerLink]="">Contact</button>
 
     <!-- Example of dropdown menu -->
     <button mat-icon-button [matMenuTriggerFor]="menu">
