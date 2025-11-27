@@ -7,8 +7,8 @@ export interface Card {
   Subtitle: string;
   Image: string;
   Desc: string;
-  
 }
+
 @Component({
   selector: 'app-cardtile',
   standalone: true,
@@ -16,6 +16,7 @@ export interface Card {
   templateUrl: './cardtile.html',
   styleUrls: ['./cardtile.scss'],
 })
+
 export class Cardtile {
   
   @Input() icon: string = "https://i.imgur.com/AxgaNX3.png";
