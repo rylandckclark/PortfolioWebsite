@@ -1,15 +1,25 @@
 <mat-grid-list cols="6" rowHeight="100%">
-  @for (tile of tiles; track tile) {
+  @for (tile of tiles; let i = $index; track tile) {
     <mat-grid-tile
       [colspan]="tile.cols"
       [rowspan]="tile.rows"
       [style.background]="tile.color">
-    @if(tile.component) {
-        <ng-container *ngComponentOutlet="tile.component"></ng-container>
+        
+    @if(i === 1)
+    {
+      <app-cardtile
+      [icon] = "'https://i.imgur.com/AxgaNX3.png'" 
+      [title]="'Project Showcase'"
+      [subtitle]="'Console BlackJack'"
+      [image]="'assets/images/blackjack.png'"
+      [desc]="'A simple text-input version of the classic Blackjack card game! Written in C# as a .Net Framework Console application, this project is equipped with logic surrounding all possible decisions including hit, stand, split, double-down, surrender, insurance, and any combination of the six. Hand information is packed together in structs and passed between methods to seamlessly deliver game outcomes. Although lacking in visual spectacle, the project serves as an intuitive way to implement switch case statements, structs, loop logic, methods, method overloads, enums, input-checking, delays, and algorithms.'">
+      </app-cardtile>
     }
+    
     @else {
         <span>{{tile.text}}</span>
     }</mat-grid-tile>
+    
   }
 </mat-grid-list>
 
