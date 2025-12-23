@@ -16,13 +16,9 @@ export interface Card {
   templateUrl: './cardtile.html',
   styleUrls: ['./cardtile.scss'],
 })
-<<<<<<< HEAD
 
 export class Cardtile {
-=======
-export class Cardtile implements OnInit {
->>>>>>> refs/remotes/origin/master
-  
+
   @Input() icon: string = "Default";
   @Input() title: string = 'Default';
   @Input() subtitle: string = 'Default';
@@ -35,13 +31,13 @@ export class Cardtile implements OnInit {
   /* As the class is initialized the inputs are assigned to their correct variables, this will allow for dynamic creation of cardtiles */
   ngOnInit(): void {
     this.Cards = [{
-      
+
       Icon: this.icon,
       Title: this.title,
       Subtitle: this.subtitle,
       Image: this.image,
       Desc: this.desc
-    
+
     }];
   }
 }
